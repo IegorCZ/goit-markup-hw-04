@@ -55,6 +55,9 @@ body{
 /* ========Header styles======== */
 .page-header{
     border-bottom: 1px solid #E7E9FC;
+    box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .menu-link:hover,
 .menu-link:focus{
@@ -136,6 +139,11 @@ body{
     max-width: 1440px;
     margin: 0 auto;
     padding: 188px 0;
+background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/backgroundheader/people-office.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
 }
 .main-title{
     margin: auto;
@@ -166,16 +174,13 @@ body{
         letter-spacing: 0.04em;
         color: #fff;
         background-color: #4d5ae5;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-service:hover,
 .order-service:focus {
     background-color: #404BBF
 }
-.background-picture{
-    width: 1440px;
-    height: 600px;
-}
+
 /* ========Benefits styles======== */
 .benefits{
     padding: 120px 0;
@@ -205,6 +210,16 @@ body{
 }
 .benefits-list-item{
     width: calc((100% - 72px) / 4);
+}
+.benefits-icon-total{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
 }
 /* ========Team styles======== */
 .team-background{
@@ -290,6 +305,7 @@ body{
 .portfolio-photos {
     width: calc((100% - 48px) / 3);
     height: 420px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item-description{
     padding: 32px 16px;
@@ -324,6 +340,9 @@ body{
 }
 .portfolio-photos:hover .overlay-text{
     transform: translateY(0%);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 /* ========Footer styles======== */
 .page-footer{
@@ -357,20 +376,36 @@ body{
 }
 .footer-container{
     display: flex;
+    align-items: baseline;
 }
 .footer-logo-text{
     margin-right: 120px;
 }
 .social-list-link{
-    display: block;
+    background-color:#4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     line-height: 0;
-    fill:#404BBF;
-    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover,
 .social-list-link:focus{
-    stroke: #31D0AA;
+    background-color: #31d0aa;
 }
 .social-list{
     display: flex;
+    gap: 16px;
+}
+.social-media{
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+
+}
+.social-list-icon{
+    fill:#f4f4fd;
 }
